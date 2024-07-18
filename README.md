@@ -22,3 +22,5 @@ This is all in the main ui.ino file, so you should be able to do the following t
 8) For board, select ESP32S3 Dev Module, ensure the proper board settings (again, see the Waveshare wiki), then compile/upload to board.
 
 This should compile with your UI files, as the ui.ino is mainly there to setup the boot session and call ui_init (then let lvgl do its thing). You can add your own custom functions and C externs to the ui.ino as needed (such as WiFi connect, HTTP server, scale functions, etc.), or you can make these separate imported files. But just keep the core things where they are.
+
+Bonus note: Squareline will override your lvgl.h file, so once you adjust any settings (e.g., font), make a backup of it so you can simply copy and rename to lvgl.h when you reexport ui files.
